@@ -1,16 +1,22 @@
-package Ejercicio1;
+package Vehiculos;
 
 public class Auto extends Vehiculo {
-    int numeroPuertas;
+    private int cantidadPuertas;
 
-    public Auto(String marca, String modelo, int numeroPuertas) {
-        super(marca, modelo);
-        this.numeroPuertas = numeroPuertas;
+    public Auto(String marca, String modelo, int anio, int cantidadPuertas) {
+        super(marca, modelo, anio);
+        this.cantidadPuertas = cantidadPuertas;
     }
 
     @Override
     public void mostrarDatos() {
+        System.out.println("=== AUTO ===");
         super.mostrarDatos();
-        System.out.println("Número de puertas: " + numeroPuertas);
+        System.out.println("Cantidad de puertas: " + cantidadPuertas);
+    }
+
+    @Override
+    public void arrancar() {
+        System.out.println("El auto está arrancando suavemente.");
     }
 }
